@@ -9,7 +9,7 @@ function Navigation() {
           <NavLink to="/cars">Cars</NavLink>
         </li>
         <li>
-          <NavLink to="/beach">Beaches</NavLink>
+          <NavLink to="/plant">Plants</NavLink>
         </li>
         <li>
           <NavLink to="/bird">Birds</NavLink>
