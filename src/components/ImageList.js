@@ -1,5 +1,5 @@
 import React from "react";
-import NoImages from "./NoImages";
+import NoImage from "./NoImage";
 import Image from "./Image";
 
 function ImageList(props) {
@@ -14,7 +14,7 @@ function ImageList(props) {
       return <Image url={url} key={id} alt={title} />;
     });
   } else {
-    noImages = <NoImages />;
+    noImages = <NoImage />;
   }
   return (
     <div>

@@ -12,7 +12,10 @@ function PhotoContextProvider(props) {
         `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=50&format=json&nojsoncallback=1`
       )
       .then((response) => {
+        // set images from response
         setImages(response.data.photos.photo);
+
+        // once image is loaded, set loading to false
         setLoading(false);
       })
       .catch((error) => {

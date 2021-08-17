@@ -42,10 +42,7 @@ class App extends Component {
                 path="/bird"
                 render={() => <GalleryContainer searchTerm="bird" />}
               />
-              <Route
-                path="/food"
-                render={() => <GalleryContainer searchTerm="food" />}
-              />
+
               <Route
                 path="/search/:searchInput"
                 render={(props) => (

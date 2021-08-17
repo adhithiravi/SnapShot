@@ -14,9 +14,6 @@ function Navigation() {
         <li>
           <NavLink to="/bird">Birds</NavLink>
         </li>
-        <li>
-          <NavLink to="/food">Food</NavLink>
-        </li>
       </ul>
     </nav>
   );

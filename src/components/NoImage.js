@@ -1,6 +1,6 @@
 import React from "react";
 
-function NoImages() {
+function NoImage() {
   return (
     <div>
       <h2>No Images Found</h2>
@@ -9,4 +9,4 @@ function NoImages() {
   );
 }
 
-export default NoImages;
+export default NoImage;
