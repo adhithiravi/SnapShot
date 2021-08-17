@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import PhotoContextProvider from "./context/PhotoContext";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/Header";
-import Item from "./components/Item";
-import Search from "./components/Search";
+import GalleryContainer from "./components/GalleryContainer";
 import NotFound from "./components/NotFound";
 
 class App extends Component {
@@ -31,17 +30,28 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={() => <Redirect to="/cars" />} />
 
-              <Route path="/cars" render={() => <Item searchTerm="Cars" />} />
+              <Route
+                path="/cars"
+                render={() => <GalleryContainer searchTerm="Cars" />}
+              />
               <Route
                 path="/plant"
-                render={() => <Item searchTerm="plants" />}
+                render={() => <GalleryContainer searchTerm="plants" />}
               />
-              <Route path="/bird" render={() => <Item searchTerm="bird" />} />
-              <Route path="/food" render={() => <Item searchTerm="food" />} />
+              <Route
+                path="/bird"
+                render={() => <GalleryContainer searchTerm="bird" />}
+              />
+              <Route
+                path="/food"
+                render={() => <GalleryContainer searchTerm="food" />}
+              />
               <Route
                 path="/search/:searchInput"
                 render={(props) => (
-                  <Search searchTerm={props.match.params.searchInput} />
+                  <GalleryContainer
+                    searchTerm={props.match.params.searchInput}
+                  />
                 )}
               />
               <Route component={NotFound} />

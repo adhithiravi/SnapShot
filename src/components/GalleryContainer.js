@@ -1,7 +1,7 @@
 import React from "react";
 import Gallery from "./Gallery";
 
-function Item({ searchTerm }) {
+function GalleryContainer({ searchTerm }) {
   return (
     <div>
       <h2>{searchTerm} Pictures</h2>
@@ -10,4 +10,4 @@ function Item({ searchTerm }) {
   );
 }
 
-export default Item;
+export default GalleryContainer;

@@ -1,25 +1,18 @@
-import React from "react";
-import NoImages from "./NoImages";
-import Image from "./Image";
+import React, { useContext, useEffect } from "react";
+import { PhotoContext } from "../context/PhotoContext";
+import ImageList from "./ImageList";
+import Loader from "./Loader";
 
-function Gallery(props) {
-  const results = props.data;
-  let images;
-  let noImages;
+function Gallery({ searchTerm }) {
+  const { images, loading, runSearch } = useContext(PhotoContext);
+  useEffect(() => {
+    runSearch(searchTerm);
+    // eslint-disable-next-line
+  }, [searchTerm]);
 
-  if (results.length > 0) {
-    images = results.map((image) => {
-      const { farm, server, id, secret, title } = image;
-      const url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
-      return <Image url={url} key={id} alt={title} />;
-    });
-  } else {
-    noImages = <NoImages />;
-  }
   return (
-    <div>
-      <ul>{images}</ul>
-      {noImages}
+    <div className="photo-container">
+      {loading ? <Loader /> : <ImageList data={images} />}
     </div>
   );
 }

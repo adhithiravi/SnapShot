@@ -1,5 +1,6 @@
 import * as React from "react";
 
+/* React component to display search image */
 function searchImage(props) {
   return (
     <svg
