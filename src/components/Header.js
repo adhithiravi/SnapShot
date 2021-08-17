@@ -1,5 +1,5 @@
 import React from "react";
-import SearchForm from "./Form";
+import SearchForm from "./SearchForm";
 import Navigation from "./Navigation";
 
 function Header({ history, handleSubmit }) {
