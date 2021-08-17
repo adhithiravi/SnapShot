@@ -1,8 +1,8 @@
 import React from "react";
 
-function Image({ url, title }) {
+function Image({ url, id, title }) {
   return (
-    <li>
+    <li key={id}>
       <img src={url} alt={title} />
     </li>
   );

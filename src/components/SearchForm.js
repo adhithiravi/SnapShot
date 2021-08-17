@@ -19,11 +19,7 @@ function SearchForm({ handleSubmit, history }) {
         onChange={updateSearchInput}
         value={searchEntry}
       />
-      <button
-        type="submit"
-        className={`search-button ${"active"}`}
-        disabled={!searchEntry.trim()}
-      >
+      <button type="submit" className={`search-button ${"active"}`}>
         <SearchImage />
       </button>
     </form>
