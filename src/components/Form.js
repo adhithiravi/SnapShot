@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchImage from "./images/searchImage";
 
-function Form({ handleSubmit, history }) {
+function SearchForm({ handleSubmit, history }) {
   const [searchEntry, setSearchEntry] = useState("");
   // update search text state
   const updateSearchInput = (e) => {
@@ -30,4 +30,4 @@ function Form({ handleSubmit, history }) {
   );
 }
 
-export default Form;
+export default SearchForm;
