@@ -1,5 +1,4 @@
 import React from "react";
-import NoImage from "./NoImage";
 import Image from "./Image";
 
 function ImageList({ images }) {
@@ -12,7 +11,7 @@ function ImageList({ images }) {
     });
   }
 
-  return imageList ? <ul>{imageList}</ul> : <NoImage />;
+  return imageList ? <ul>{imageList}</ul> : <></>;
 }
 
 export default ImageList;
