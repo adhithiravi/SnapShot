@@ -8,16 +8,22 @@ import NotFound from "./components/NotFound";
 /** Root of your React Application */
 function App() {
   // Prevent page reload, clear input
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, history, searchInput) => {
     e.preventDefault();
     e.currentTarget.reset();
+    let url = `/search/${searchInput}`;
+    history.push(url);
   };
 
   return (
     <PhotoContextProvider>
-      <HashRouter basename="/SnapScout">
+      <HashRouter basename="/">
         <div className="container">
-          <Route render={() => <Header handleSubmit={handleSubmit} />} />
+          <Route
+            render={(props) => (
+              <Header history={props.history} handleSubmit={handleSubmit} />
+            )}
+          />
           <Switch>
             <Route
               path="/search/:searchInput"
@@ -25,6 +31,7 @@ function App() {
                 <GalleryContainer searchTerm={props.match.params.searchInput} />
               )}
             />
+
             <Route component={NotFound} />
           </Switch>
         </div>

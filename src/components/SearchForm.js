@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchImage from "./images/searchImage";
 
-function SearchForm({ handleSubmit }) {
+function SearchForm({ history, handleSubmit }) {
   const [searchEntry, setSearchEntry] = useState("");
   // update search text state
   const updateSearchInput = (e) => {
@@ -10,7 +10,7 @@ function SearchForm({ handleSubmit }) {
   return (
     <form
       className="search-form"
-      onSubmit={(e) => handleSubmit(e, searchEntry)}
+      onSubmit={(e) => handleSubmit(e, history, searchEntry)}
     >
       <input
         type="text"
