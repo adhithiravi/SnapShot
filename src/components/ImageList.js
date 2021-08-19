@@ -7,7 +7,7 @@ function ImageList({ images }) {
     imageList = images.map((image) => {
       const { farm, server, id, secret, title } = image;
       const url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
-      return <Image />;
+      return <Image url={url} id={id} title={title} />;
     });
   }
 

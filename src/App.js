@@ -31,7 +31,22 @@ function App() {
                 <GalleryContainer searchTerm={props.match.params.searchInput} />
               )}
             />
-
+            <Route
+              path="/cars"
+              render={() => <GalleryContainer searchTerm={"cars"} />}
+            />
+            <Route
+              path="/plants"
+              render={() => <GalleryContainer searchTerm={"plants"} />}
+            />
+            <Route
+              path="/flowers"
+              render={() => <GalleryContainer searchTerm={"flowers"} />}
+            />
+            <Route
+              path="/food"
+              render={() => <GalleryContainer searchTerm={"food"} />}
+            />
             <Route component={NotFound} />
           </Switch>
         </div>
