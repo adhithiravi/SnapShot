@@ -1,10 +1,7 @@
 import React from "react";
 
-function Image({ url, id, title }) {
-  return (
-    <li key={id}>
-      <img src={url} alt={title} />
-    </li>
-  );
+/** TODO Renders the image */
+function Image() {
+  return null;
 }
 export default Image;

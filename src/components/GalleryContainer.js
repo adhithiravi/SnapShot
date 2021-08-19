@@ -1,13 +1,8 @@
 import React from "react";
-import Gallery from "./Gallery";
 
-function GalleryContainer({ searchTerm }) {
-  return (
-    <div>
-      <h2>{searchTerm} Pictures</h2>
-      <Gallery />
-    </div>
-  );
+/** TODO Renders gallery container */
+function GalleryContainer() {
+  return null;
 }
 
 export default GalleryContainer;
