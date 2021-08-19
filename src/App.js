@@ -7,23 +7,17 @@ import NotFound from "./components/NotFound";
 
 /** Root of your React Application */
 function App() {
-  // Prevent page reload, clear input, set URL and push history on submit
-  const handleSubmit = (e, history, searchInput) => {
+  // Prevent page reload, clear input
+  const handleSubmit = (e) => {
     e.preventDefault();
     e.currentTarget.reset();
-    let url = `/search/${searchInput}`;
-    history.push(url);
   };
 
   return (
     <PhotoContextProvider>
       <HashRouter basename="/SnapScout">
         <div className="container">
-          <Route
-            render={(props) => (
-              <Header handleSubmit={handleSubmit} history={props.history} />
-            )}
-          />
+          <Route render={() => <Header handleSubmit={handleSubmit} />} />
           <Switch>
             <Route
               path="/search/:searchInput"
